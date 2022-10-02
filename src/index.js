@@ -6,14 +6,17 @@ import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { ProductPageProvider } from './Context/ProductContext';
+import { WishListProvider } from './Context/WishlistContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <WishListProvider>
     <ProductPageProvider>
     <App />
     </ProductPageProvider>
+    </WishListProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

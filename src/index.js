@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <WishListProvider>
-    <ProductPageProvider>
-    <App />
-    </ProductPageProvider>
-    </WishListProvider>
+      <WishListProvider>
+        <ProductPageProvider>
+          <App />
+        </ProductPageProvider>
+      </WishListProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

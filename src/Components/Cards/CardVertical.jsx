@@ -1,7 +1,8 @@
 import React from 'react'
 
-function CardHVertical({ product,addToCart,addToWishList}) {
-   const {title, desc, rating, instock,  price:{original, discount, discounted}, categoryName , img} = product;
+function CardVertical({ title,img,desc}) {
+   console.log(title,desc)
+   
   return (
    
      <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -28,4 +29,4 @@ function CardHVertical({ product,addToCart,addToWishList}) {
   )
 }
 
-export default CardHVertical
+export default CardVertical

@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import { ProductPageProvider } from './Context/ProductContext';
-import { WishListProvider } from './Context/WishlistContext';
+import { ProductPageProvider } from './Components/Context/ProductContext';
+import { WishListProvider } from './Components/Context/WishlistContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

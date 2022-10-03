@@ -202,17 +202,17 @@ function Products() {
     <div>
         {/* <CardHVertical/> */}
         
-        <section className="products">
-                    <h1 className="content-heading">Showing All Products</h1>
-                     <div className="flex-row-flex-wrap">
+        <section class="flex flex-wrap m-">
+                    
                       {
                         products.map (card=>(
-                          <CardVertical key={products._id} title={products.title} />
+                          <CardVertical title={products.title}
+                          desc={products.desc} />
 
                         ))
                       }
                        
-                </div>
+             
         </section>
     </div>
   )

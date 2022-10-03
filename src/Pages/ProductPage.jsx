@@ -7,7 +7,7 @@ function ProductPage() {
   return (
     <div>
         <Navbar/>
-        <div>
+        <div class='flex'>
             <Asidebar/>
             <Products/>
         </div>

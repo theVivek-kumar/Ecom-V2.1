@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CardVertical({ title,img,desc}) {
+function CardVertical({title,img,desc}) {
    console.log(title,desc)
    
   return (

@@ -4,6 +4,7 @@ function Footer() {
   return (
    <div>
     this is footer section
+    and the
       
     </div>
   )

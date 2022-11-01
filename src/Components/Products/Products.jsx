@@ -202,7 +202,7 @@ function Products() {
     <div>
         {/* <CardHVertical/> */}
         
-        <section class="flex flex-wrap m-10">
+        <section class="flex flex-wrap m-6">
                     
                       {
                         products.map (card=>(

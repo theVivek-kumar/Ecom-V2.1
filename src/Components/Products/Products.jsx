@@ -1,6 +1,8 @@
 import React from 'react'
 import { v4 as uuid } from "uuid";
 import CardVertical from '../Cards/CardVertical';
+import { WishListContext } from '../Context/WishlistContext';
+import 
 
 function Products() {
   const products = [
@@ -99,115 +101,21 @@ function Products() {
       categoryName: "watch",
   
     },
-    {
-      _id: uuid(),
-        qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 2.4,
-      inStock: true,
-       price: {
-        original: "2500",
-        discount: "20%",
-        discounted: "1034",
-      },
-       img: "https://m.media-amazon.com/images/I/71qEG7IZmzL._AC_UL480_FMwebp_QL65_.jpg",
-      categoryName: "watch",
   
-    },
-    {
-      _id: uuid(),
-        qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 2.4,
-      inStock: true,
-       price: {
-        original: "1200",
-        discount: "20%",
-        discounted: "2000",
-      },
-       img: "https://m.media-amazon.com/images/I/81d2cqvIgDL._AC_UL480_FMwebp_QL65_.jpg",
-      categoryName: "denim",
-  
-    },
-    {
-      _id: uuid(),
-        qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 2.4,
-      inStock: true,
-       price: {
-        original: "1200",
-        discount: "20%",
-        discounted: "2000",
-      },
-       img: "https://m.media-amazon.com/images/I/61Y9wxRfdRL._AC_UL480_FMwebp_QL65_.jpg",
-      categoryName: "denim",
-  
-    },
-    //
-     {
-       _id: uuid(),
-         qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 2.4,
-      inStock: true,
-       price: {
-        original: "3200",
-        discount: "20%",
-        discounted: "1200",
-      },
-       img: "https://m.media-amazon.com/images/I/41ZgLHkOeCL._AC_UL480_QL65_.jpg",
-      categoryName: "hoodie",
-  
-    },
-      {
-        _id: uuid(),
-          qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 2.4,
-      inStock: true,
-       price: {
-        original: "1200",
-        discount: "20%",
-        discounted: "1000",
-      },
-       img: "https://m.media-amazon.com/images/I/71mNmVxJFHL._AC_UL480_FMwebp_QL65_.jpg",
-      categoryName: "hoodie",
-  
-    },
-       {
-         _id: uuid(),
-           qty:1,
-      title: "IndoPrimo",
-      desc: "Men's Slim Fit Casual Shirt",
-       rating: 3.4,
-      inStock: true,
-       price: {
-        original: "1200",
-        discount: "20%",
-        discounted: "500",
-      },
-       img: "https://m.media-amazon.com/images/I/71fUM-BIiaL._AC_UL480_FMwebp_QL65_.jpg",
-      categoryName: "hoodie",
-  
-    },
   ];
   
   return (
     <div>
         {/* <CardHVertical/> */}
         
-        <section class="flex flex-wrap m-6">
+        <section class="flex flex-wrap m-2">
                     
                       {
-                        products.map (card=>(
-                          <CardVertical title={products.title}
-                          desc={products.desc} />
+                        products.map (product=>(
+                          <CardVertical key={product._id} product={product}
+                          desc={products.desc} 
+                          addToCart={() => addToCart(product, product._id)}
+                          addToWishList={() => addToWishList (product,setwishList)}/>
 
                         ))
                       }

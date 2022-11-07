@@ -1,12 +1,12 @@
 import React from 'react';
-import { BsFillStarFill } from 'react-icons/bs';
+
 
 function Asidebar() {
   return (
     <div>
 
-      <aside class="w-64" aria-label="Sidebar">
-        <div class=" h-screen py-4 px-3 bg-gray-50  dark:bg-gray-800">
+      <aside class="w-64 h-full " aria-label="Sidebar">
+        <div class=" h-full py-4 px-3 bg-gray-50  dark:bg-gray-800">
 
           <div className='flex justify-between'>
             <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">

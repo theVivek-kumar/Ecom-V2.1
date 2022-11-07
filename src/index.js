@@ -7,16 +7,19 @@ import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { ProductPageProvider } from './Components/Context/ProductContext';
 import { WishListProvider } from './Components/Context/WishlistContext';
+import { CartProvider } from './Components/Context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+     <CartProvider> 
       <WishListProvider>
         <ProductPageProvider>
           <App />
         </ProductPageProvider>
       </WishListProvider>
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

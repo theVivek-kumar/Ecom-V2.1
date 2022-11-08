@@ -1,8 +1,12 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar';
+import { BsFillCartCheckFill ,BsFillSuitHeartFill } from 'react-icons/bs';
 import { useContext, useEffect } from "react";
 import  axios from "axios";
 import CardVertical from '../Cards/CardVertical';
+import { CartContext } from '../Context/CartContext';
+import { WishListContext} from '../Context/WishlistContext';
+import {CartPrice} from '../CartPrice';
 
 function Cartpage() {
     
@@ -31,7 +35,6 @@ function Cartpage() {
   const totalPrice = price - Number(discountedPrice) + 199;
   
   return (
-    
     <>
     <Navbar />
     <h3 className="cart-heading-my-cart" style={{ color: "white", fontSize: "3rem", marginTop: "4rem" }}>My<span style={{ color: "#f5ac2c" }}>-Cart</span> </h3>
@@ -49,7 +52,7 @@ function Cartpage() {
     
     </div>
     {
-            cart.length === 0 ?  <h3 className="cart-heading" style={{ color: "white", fontSize: "4rem" }}>Your cart is<span style={{ color: "#f5ac2c", alignItems: "center" }}>-Empty -- </span> <MdRemoveShoppingCart /></h3>: <Cartprice qty={quantity} price={price} discountPrice={discountedPrice} totalPrice={totalPrice}/>
+            cart.length === 0 ?  <h3 className="cart-heading" style={{ color: "white", fontSize: "4rem" }}>Your cart is<span style={{ color: "#f5ac2c", alignItems: "center" }}>-Empty -- </span> <  BsFillCartCheckFill/></h3>: <CartPrice qty={quantity} price={price} discountPrice={discountedPrice} totalPrice={totalPrice}/>
             
         }
     </div>
